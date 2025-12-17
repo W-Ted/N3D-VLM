@@ -33,7 +33,7 @@ Accurate Spatial Reasoning</strong></h1>
 
 
 
-https://github.com/user-attachments/assets/77c2abac-17c8-402a-8fda-ad10262484fe
+https://github.com/user-attachments/assets/077b6a9c-d1b3-4ebe-a9f1-e652b654b7d1
 
 
 ## Overview
@@ -68,19 +68,19 @@ python demo.py
 ### Demo 1
 
 
-https://github.com/user-attachments/assets/ce660743-c951-4773-affb-61e532751758
+https://github.com/user-attachments/assets/69b2da73-4658-4145-b71e-d47779904a11
 
 
 ### Demo 2
 
 
-https://github.com/user-attachments/assets/c02af68b-d95c-4510-abbd-c557e1faf9c7
+https://github.com/user-attachments/assets/1bc0ee64-7a15-4592-941d-1037a26fb108
 
 
 ### Demo 3
 
 
-https://github.com/user-attachments/assets/1574a4af-280f-4fa5-bf35-07cdd5bc5913
+https://github.com/user-attachments/assets/ba7ece12-4288-411d-9964-c676b78c6d5c
 
 
 After running the code above, the inference results will be saved in the `outputs` directory, including generated answers in `*.json` format, and 3D grounding results in `*.rrd` format. 
