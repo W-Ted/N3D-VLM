@@ -31,8 +31,11 @@ Accurate Spatial Reasoning</strong></h1>
 </p>
 
 
-<!-- ![demo-0](assets/output-0-clip.gif) -->
-https://github.com/user-attachments/assets/db5c783c-1d1f-489e-8040-95353a4bb396
+
+
+https://github.com/user-attachments/assets/77c2abac-17c8-402a-8fda-ad10262484fe
+
+
 ## Overview
 **N3D-VLM** is a unified vision-language models for **native 3D grounding** and **3D spatial reasoning**. By incorporating native 3D grounding, our model enables precise spatial reasoning, allowing users to query object relationships, distances, and attributes directly within complex 3D environments.
 
@@ -64,9 +67,21 @@ python demo.py
 
 ### Demo 1
 
+
+https://github.com/user-attachments/assets/ce660743-c951-4773-affb-61e532751758
+
+
 ### Demo 2
 
+
+https://github.com/user-attachments/assets/c02af68b-d95c-4510-abbd-c557e1faf9c7
+
+
 ### Demo 3
+
+
+https://github.com/user-attachments/assets/1574a4af-280f-4fa5-bf35-07cdd5bc5913
+
 
 After running the code above, the inference results will be saved in the `outputs` directory, including generated answers in `*.json` format, and 3D grounding results in `*.rrd` format. 
 The rrd files can be visualized by using [Rerun](https://rerun.io):
