@@ -1,0 +1,9 @@
+[
+    {
+        "point_cloud": "data/demo3.npz",
+        "image_path": "data/demo3.jpg",
+        "question": "<image>What is the height of person?",
+        "Native 3D Grounding": "bbox_0=Bbox(person,0.275,0.483,2.971677659511566,0.0,0.6149709421396256,0.9107797497510911,0.7589831247925759)\n",
+        "3D Spatial Reasoning": "<think>The 3D bbox of person is [0.27, 0.03, 2.97, 0.61, 0.91, 0.76]. So the height of person is 0.91 meters.</think> person is 0.91 meters in height."
+    }
+]

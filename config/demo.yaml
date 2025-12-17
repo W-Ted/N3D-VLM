@@ -1,0 +1,4 @@
+model_name_or_path: yuxinhk/N3D-VLM
+template: n3d_vlm
+infer_backend: huggingface  # choices: [huggingface, vllm, sglang]
+trust_remote_code: true

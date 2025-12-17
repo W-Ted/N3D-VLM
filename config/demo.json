@@ -1,0 +1,67 @@
+[
+    {
+        "messages": [
+            {
+                "content": "<image>Identify the 3D boxes for all the 'hotair ballon' in this scene. The reference code is as followed: <code_template>",
+                "role": "user"
+            },
+            {
+                "content": "bbox_0=Bbox(Hotair ballon,0.13203125,0.42488262910798125,20.328125,0.0,2.1015625,2.4644775390625,1.21875)\nbbox_1=Bbox(Hotair ballon,0.178125,0.5363849765258216,31.84375,0.0,1.2265625,1.2479248046875,0.4375)\nbbox_2=Bbox(Hotair ballon,0.2296875,0.5082159624413145,26.96875,0.0,1.76953125,2.2451171875,0.90625)\nbbox_3=Bbox(Hotair ballon,0.2484375,0.0715962441314554,13.4765625,0.0,1.328125,1.330078125,0.96875)\nbbox_4=Bbox(Hotair ballon,0.38671875,0.4072769953051643,17.8828125,0.0,2.7275390625,3.443359375,0.953125)\nbbox_5=Bbox(Hotair ballon,0.67890625,0.6654929577464789,23.7890625,0.0,1.931640625,2.3330078125,1.140625)\nbbox_6=Bbox(Hotair ballon,0.7671875,0.397887323943662,16.62890625,0.0,3.060546875,3.5078125,1.5859375)\nbbox_7=Bbox(Hotair ballon,0.89609375,0.21713615023474178,18.1875,0.0,2.2890625,2.591796875,1.0625)\nbbox_8=Bbox(Hotair ballon,0.97890625,0.47300469483568075,14.734375,0.0,0.53125,2.28076171875,0.796875)\nbbox_9=Bbox(Hotair ballon,0.98359375,0.6220657276995305,30.109375,0.0,0.90625,1.6669921875,0.71875)\n",
+                "role": "assistant"
+            },
+            {
+                "content": "If you are at 4_hotair ballon, where will you find 2_hotair ballon?",
+                "role": "user"
+            },              
+            {
+                "content": "",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "data/demo1.jpg"
+        ],
+        "points": [
+            "data/demo1.npz"
+        ],
+        "question_type": "2p_direction"
+    },
+    {
+        "messages": [
+            {
+                "content": "<image>Is person positioned behind orange/tangerine as seen from the side opposite the photographer?",
+                "role": "user"
+            },
+            {
+                "content": "bbox_0=Bbox(Person,0.490625,0.585480093676815,2.8857421875,0,0.609619140625,0.33074951171875,0.380859375)\nbbox_1=Bbox(Orange/Tangerine,0.721875,0.8583138173302107,1.3642578125,0,0.218994140625,0.0634765625,0.1328125)\n",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "data/demo2.jpg"
+        ],
+        "points": [
+            "data/demo2.npz"
+        ],
+        "question_type": "2p_behind_predicate_inverse"
+    },
+    {
+        "messages": [
+            {
+                "content": "<image>What is the height of person?",
+                "role": "user"
+            },
+            {
+                "content": "bbox_0=Bbox(Person,0.2760416666666667,0.46953125,3.056640625,0,0.6019210815429688,0.902587890625,0.859375)\n",
+                "role": "assistant"
+            }
+        ],
+        "images": [
+            "data/demo3.jpg"
+            ],
+        "points": [
+            "data/demo3.npz"
+        ],
+        "question_type": "2p_height_data_meters"
+    }
+]

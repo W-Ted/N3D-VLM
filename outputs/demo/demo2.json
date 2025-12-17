@@ -1,0 +1,9 @@
+[
+    {
+        "point_cloud": "data/demo2.npz",
+        "image_path": "data/demo2.jpg",
+        "question": "<image>Is person positioned behind orange/tangerine as seen from the side opposite the photographer?",
+        "Native 3D Grounding": "bbox_0=Bbox(person,0.519,0.587,2.75349760055542,0.0,0.3737176954746247,0.34145429730415344,0.26751734316349035)\nbbox_1=Bbox(orange/tangerine,0.72,0.858,1.372624158859253,0.0,0.21643362939357758,0.07124833762645721,0.11292189359664918)\n",
+        "3D Spatial Reasoning": "<think>1. The 3D center coordinate of person is [-0.04, -0.13, 2.75]. The 3D center coordinate of orange/tangerine is [-0.25, -0.27, 1.37]. 2. We can determine the front-behind relationship as follows: Step 1: Compare the Z coordinates of the centers. Z_A = 2.75, Z_B = 1.37 Step 2: Determine if person is in front of or behind of orange/tangerine. Since Z_A = 2.75 > Z_B = 1.37, and we are considering the opposite view, person is in front of orange/tangerine. </think> That is False."
+    }
+]
