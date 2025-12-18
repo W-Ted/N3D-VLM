@@ -37,7 +37,7 @@ https://github.com/user-attachments/assets/077b6a9c-d1b3-4ebe-a9f1-e652b654b7d1
 
 
 ## Overview
-**N3D-VLM** is a unified vision-language models for **native 3D grounding** and **3D spatial reasoning**. By incorporating native 3D grounding, our model enables precise spatial reasoning, allowing users to query object relationships, distances, and attributes directly within complex 3D environments.
+**N3D-VLM** is a unified vision-language model for **native 3D grounding** and **3D spatial reasoning**. By incorporating native 3D grounding, our model enables precise spatial reasoning, allowing users to query object relationships, distances, and attributes directly within complex 3D environments.
 
 
 ## Updates
