@@ -1,6 +1,6 @@
 <p align="center">
 <h1 align="center"><strong>N3D-VLM: Native 3D Grounding Enables
-Accurate Spatial Reasoning</strong></h1>
+Accurate Spatial Reasoning in Vision-Language Models</strong></h1>
 <!-- <h3 align="center">Arxiv 2025</h3> -->
 
 <p align="center">
@@ -93,7 +93,7 @@ rerun outputs/demo1.rrd
 
 ```BibTeX
 @article{wang2025n3d,
-    title={N3D-VLM: Native 3D Grounding Enables Accurate Spatial Reasoning},
+    title={N3D-VLM: Native 3D Grounding Enables Accurate Spatial Reasoning in Vision-Language Models},
     author={Wang, Yuxin and Ke, Lei and Zhang, Boqiang and Qu, Tianyuan and Yu, Hanxun and Huang, Zhenpeng and Yu, Meng and Xu, Dan and Yu, Dong},
     journal={arXiv preprint arXiv:25xx.xxxxx},
     year={2024}
