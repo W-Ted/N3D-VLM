@@ -96,7 +96,7 @@ rerun outputs/demo1.rrd
     title={N3D-VLM: Native 3D Grounding Enables Accurate Spatial Reasoning in Vision-Language Models},
     author={Wang, Yuxin and Ke, Lei and Zhang, Boqiang and Qu, Tianyuan and Yu, Hanxun and Huang, Zhenpeng and Yu, Meng and Xu, Dan and Yu, Dong},
     journal={arXiv preprint arXiv:2512.16561},
-    year={2024}
+    year={2025}
 }
 ```
 
