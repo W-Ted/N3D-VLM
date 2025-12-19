@@ -14,7 +14,7 @@ Accurate Spatial Reasoning in Vision-Language Models</strong></h1>
     <a href="https://raymond-myu.github.io/">Meng Yu</a><sup>2</sup>,
     <a href="https://www.danxurgb.net/">Dan Xu</a><sup>1✉️</sup>,
     <a href="https://sites.google.com/view/dongyu888/">Dong Yu</a><sup>2</sup>
-    <br>
+    <br
     <sup>1</sup>HKUST,
     <sup>2</sup>Tencent AI Lab,
     <sup>3</sup>CUHK,
