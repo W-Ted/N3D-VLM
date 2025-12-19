@@ -22,7 +22,7 @@ Accurate Spatial Reasoning in Vision-Language Models</strong></h1>
 </p>
 
 <div align="center">
-    <a href='https://arxiv.org/abs/2512.16561' target="_blank"><img src='https://img.shields.io/badge/arXiv-25xx.xxxxx-b31b1b.svg'></a>  
+    <a href='https://arxiv.org/abs/2512.16561' target="_blank"><img src='https://img.shields.io/badge/arXiv-2512.16561-b31b1b.svg'></a>  
     <a href='https://n3d-vlm.github.io' target="_blank"><img src='https://img.shields.io/badge/Project-Page-Green'></a>  
     <a href='https://huggingface.co/yuxinhk/N3D-VLM' target="_blank">
         <img src='https://img.shields.io/badge/Hugging%20Face-Models-blue'>
