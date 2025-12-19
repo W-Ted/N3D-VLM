@@ -9,8 +9,8 @@ Accurate Spatial Reasoning in Vision-Language Models</strong></h1>
     <a href="https://cyrilsterling.github.io/">Boqiang Zhang</a><sup>2</sup>,
     <a href="https://openreview.net/profile?id=~Tianyuan_Qu2">Tianyuan Qu</a><sup>2,3</sup>,
     <a href="https://hanxunyu.github.io/">Hanxun Yu</a><sup>2,4</sup>,
-    <a href="https://openreview.net/profile?id=~Zhenpeng_Huang1">Zhenpeng Huang</a><sup>2,5</sup>,
     <br>
+    <a href="https://openreview.net/profile?id=~Zhenpeng_Huang1">Zhenpeng Huang</a><sup>2,5</sup>,
     <a href="https://raymond-myu.github.io/">Meng Yu</a><sup>2</sup>,
     <a href="https://www.danxurgb.net/">Dan Xu</a><sup>1✉️</sup>,
     <a href="https://sites.google.com/view/dongyu888/">Dong Yu</a><sup>2</sup>
