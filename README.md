@@ -42,7 +42,7 @@ https://github.com/user-attachments/assets/077b6a9c-d1b3-4ebe-a9f1-e652b654b7d1
 
 ## Updates
 
-- **`2025/12/20`**: We released this repo with the pre-trained model and inference code.
+- **`2025/12/19`**: We released this repo with the pre-trained model and inference code.
 
 
 ## Installation
