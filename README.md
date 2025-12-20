@@ -69,7 +69,7 @@ python demo.py
 ### Demo 1
 
 
-https://github.com/user-attachments/assets/69b2da73-4658-4145-b71e-d47779904a11
+https://github.com/user-attachments/assets/e86306f2-152d-4337-a8d2-d165a26ce305
 
 
 ### Demo 2
