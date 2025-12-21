@@ -50,9 +50,12 @@ https://github.com/user-attachments/assets/077b6a9c-d1b3-4ebe-a9f1-e652b654b7d1
 
 ```
 git clone https://github.com/W-Ted/N3D-VLM.git
-
 cd N3D-VLM
-conda env create -n n3d_vlm -f n3d-vlm.yaml
+
+conda env create -n n3d_vlm python=3.11 -y
+conda activate n3d_vlm
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu124
+pip install -r requirements.txt
 ```
 
 ## Pre-trained model
@@ -60,7 +63,7 @@ We provide the pre-trained model [here](https://huggingface.co/yuxinhk/N3D-VLM).
 
 
 ## Inference 
-We provide three examples for inference of N3D-VLM. You could check the source files in `data` directory, where `*.jpg` are the source images and `*.npz` are the monocular point clouds obtained by using [MoGe2](https://github.com/microsoft/moge)
+We provide three examples for inference of N3D-VLM. You could check the source files in `data` directory, where `*.jpg` are the source images and `*.npz` are the monocular point clouds obtained by using [MoGe2](https://github.com/microsoft/moge). 
 ```
 # inference 
 python demo.py
@@ -89,6 +92,8 @@ The rrd files can be visualized by using [Rerun](https://rerun.io):
 ```
 rerun outputs/demo1.rrd
 ```
+
+If you want to do the 3D Detection / Grouding only, you may check the prompt in the first example. 
 
 ## Citation
 

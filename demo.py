@@ -43,10 +43,10 @@ from pcd import parse_bbox_dict_xy
 from pcd import parse_bbox_dict_uv, serialize_bboxes_uv
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-moge_path = os.path.join(current_dir, 'third_party', 'MoGe2')
+moge_path = os.path.join(current_dir, 'third_party', 'MoGe')
 if moge_path not in sys.path:
     sys.path.append(moge_path)
-from MoGe.moge.model.v2 import MoGeModel
+from moge.model.v2 import MoGeModel
 
 # Copyright 2025 the LlamaFactory team.
 #
