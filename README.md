@@ -49,7 +49,7 @@ https://github.com/user-attachments/assets/077b6a9c-d1b3-4ebe-a9f1-e652b654b7d1
 ## Installation
 
 ```
-git clone https://github.com/W-Ted/N3D-VLM.git
+git clone --recursive https://github.com/W-Ted/N3D-VLM.git
 cd N3D-VLM
 
 conda env create -n n3d_vlm python=3.11 -y
