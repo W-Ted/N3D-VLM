@@ -93,7 +93,7 @@ The rrd files can be visualized by using [Rerun](https://rerun.io):
 rerun outputs/demo1.rrd
 ```
 
-If you want to do the 3D Detection / Grouding only, you may check the prompt in the first example. 
+<!-- If you want to do the 3D Detection / Grouding only, please check the prompt in the first example.  -->
 
 ## Citation
 
