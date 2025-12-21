@@ -42,6 +42,11 @@ from qwen2_5_vl.modeling_qwen2_5_vl_pe import Qwen2_5_VLForConditionalGeneration
 from pcd import parse_bbox_dict_xy
 from pcd import parse_bbox_dict_uv, serialize_bboxes_uv
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+moge_path = os.path.join(current_dir, 'third_party', 'MoGe2')
+if moge_path not in sys.path:
+    sys.path.append(moge_path)
+from MoGe.moge.model.v2 import MoGeModel
 
 # Copyright 2025 the LlamaFactory team.
 #
@@ -422,6 +427,75 @@ def generate_scene_condition(question2, pd_list, cur_pd_list_2d, auto_split, rou
     return cond
 
 
+def load_moge_model(device="cuda"):
+    global _MOGE_MODEL
+    if _MOGE_MODEL is None:
+        print("Loading MoGe-2 model...")
+        _MOGE_MODEL = MoGeModel.from_pretrained("Ruicheng/moge-2-vitl-normal").to(device)
+        _MOGE_MODEL.eval()
+    return _MOGE_MODEL
+
+
+def preprocess_image_moge(image_path, target_size=640):
+    if not os.path.exists(image_path):
+        raise FileNotFoundError(f"{image_path} does not exist")
+        
+    input_image = cv2.imread(image_path)
+    if input_image is None:
+        raise ValueError(f"Failed to read image: {image_path}")
+        
+    h, w = input_image.shape[:2]
+    
+    # Resize logic exactly as in your script
+    if max(h, w) != target_size:
+        scale = target_size / max(h, w)
+        new_w = round(w * scale)
+        new_h = round(h * scale)
+        # Ensure exactly target_size on longest side
+        if max(new_w, new_h) != target_size:
+            if w > h:
+                new_w, new_h = target_size, round(h * target_size / w)
+            else:
+                new_h, new_w = target_size, round(w * target_size / h)
+        input_image = cv2.resize(input_image, (new_w, new_h))
+    
+    input_image_rgb = cv2.cvtColor(input_image, cv2.COLOR_BGR2RGB)
+    return input_image_rgb
+
+def get_moge_data(image_path, pcd_path=None, device="cuda"):
+    print(f"Extracting point cloud for {os.path.basename(image_path)}...")
+    
+    model = load_moge_model(device)
+    img_rgb = preprocess_image_moge(image_path)
+    input_tensor = torch.tensor(img_rgb / 255, dtype=torch.float32, device=device).permute(2, 0, 1)
+    
+    with torch.no_grad():
+        output = model.infer(input_tensor)
+    
+    depth_float32 = output["depth"].cpu().numpy().astype(np.float32)
+    points = output["points"].cpu().numpy()
+    
+    # (x right, y down, z forward) -> (x left, y up, z forward)
+    points[:, :, 0:2] *= -1 
+    
+    mask = output["mask"].cpu().numpy()
+    intr_float32 = output["intrinsics"].cpu().numpy().astype(np.float32)
+    
+    # concat pcd
+    pcd = np.concatenate([points, mask[..., None]], axis=-1) # h,w,4
+    pcd_float16 = pcd.astype(np.float16)
+    
+    # save
+    if pcd_path:
+        os.makedirs(os.path.dirname(pcd_path), exist_ok=True)
+        np.savez_compressed(pcd_path, 
+                            pcd=pcd_float16,
+                            depth=depth_float32,
+                            mask=mask,
+                            intr=intr_float32)
+        print(f"Saved generated point cloud to {pcd_path}")
+    
+    return pcd_path
 
 parser = argparse.ArgumentParser(description='Process some parameters.')
 parser.add_argument('--root_json', type=str, default='config/demo.json',
@@ -442,6 +516,7 @@ args_output = infer_args.args_output
 args_path = infer_args.args_path
 template_path = infer_args.template_path
 save_dir_name = infer_args.save_dir_name
+_MOGE_MODEL = None
 
 
 override_config = OmegaConf.from_cli([])
@@ -480,8 +555,10 @@ with open(root_json, 'r') as f:
 for nn in trange(len(data)):
     item = data[nn]
 
-    pcd_path = item['points'][0]
     image_path = item['images'][0]
+    pcd_path = item['points'][0]
+    if not os.path.exists(pcd_path): # get pcd from moge2
+        get_moge_data(image_path, pcd_path)
     question_type = item['question_type']
 
     question = item["messages"][0]["content"]
