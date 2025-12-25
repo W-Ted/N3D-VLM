@@ -96,7 +96,7 @@ rerun outputs/demo1.rrd
 If you want to do the 3D Detection only, please check the example as below. 
 ```
 # inference 
-python demo.py
+python detection.py
 # visualization
 rerun outputs/test1.rrd
 ```
